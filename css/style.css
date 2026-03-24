@@ -6,19 +6,29 @@
 body {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
-
-}
-
-footer img{
-  width: 10%;
-  height: auto;
-  position: absolute;
-  right : 20px;
+  margin: auto;
 }
 
 .container{
   max-width: 1300px;
   margin: 0 auto;
+}
+
+.bouton {
+  background-color: rgb(35, 35, 35);
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 0.5rem;
+  font-family: "Courier Prime";
+  font-size: 1.2rem;
+}
+
+.bouton:hover {
+  background: rgba(255, 255, 255, 0.1); /* Fond blanc très transparent */
+  backdrop-filter: blur(15px);         /* Flou de l'arrière-plan */
+  -webkit-backdrop-filter: blur(15px);
+  transform: translateY(3px);
 }
 
 /* animation logo*/
@@ -38,11 +48,6 @@ footer img{
   object-fit: cover;
 }
 
-
-#accueil {
-  display: none;
-}
-
 /* le header */
 
 
@@ -50,14 +55,14 @@ footer img{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    
 }
+
 .regular a {
   text-decoration: none;
   margin: 15px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   padding : 5px;
-  color : white;
+  color : rgb(235, 246, 192)
 }
 
 .regular a:hover{
@@ -71,7 +76,7 @@ footer img{
 
 .regular {
   width: 100%;
-  height: auto;
+  height: 140px;
   background: rgba(255, 255, 255, 0.1); /* Fond blanc très transparent */
   backdrop-filter: blur(15px);         /* Flou de l'arrière-plan */
   -webkit-backdrop-filter: blur(15px);
@@ -79,19 +84,63 @@ footer img{
   top: 0;
   left : 0;
   z-index: 999;
+  display: flex;
+  align-items: center;
 }
+
+/* Hero section de accueil */
 
 .hero {
+  margin-top: 140px;
   height: 100vh;
   background: url('/img/hero.png') no-repeat center center/cover;
-  position: relative;
 }
 
-.hero h1{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.hero-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 6rem;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 3rem;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.boutons-hero {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boutons-hero a {
+  width: 40%;
+  text-align: center;
+  align-self: center;
+}
+
+/* Hero section des autres pages */
+
+.hero-section {
+  margin-top: 26vh;
+  margin-bottom: 8vh;
+}
+
+.hero-section h1 {
+  margin: auto;
   color: white;
   font-size: 6rem;
   font-family: "Archivo Black", sans-serif;
@@ -134,7 +183,6 @@ footer img{
 
 
 .gallery{
-  margin-top: 150px;
   column-count: 3;
   column-gap: 15px;
 }
@@ -153,7 +201,6 @@ footer img{
 /* Partie présentation*/
 
 .presentation{
-  margin-top: 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -181,13 +228,11 @@ h1{
 }
 
 #DevProjects{
-  margin-top: 100px;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   height: auto;
   margin-bottom: 20px;
-
 }
 
 
@@ -250,3 +295,43 @@ h1{
 
 
 
+
+
+
+
+
+/* Footer */
+
+footer {
+  background-color: rgb(35, 35, 35);
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding-top: 5vh;
+  margin-top: 8vh;
+  border-top: 2px solid white;
+}
+
+footer div {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 0 12vh;
+  font-family: "Archivo Black", sans-serif;
+}
+
+footer div span {
+  color: rgb(235, 246, 192);
+}
+
+footer img{
+  width: 10%;
+  height: auto;
+  margin-right: 3vh;
+}
+
+.footer-name {
+  font-size: 4vh;
+}
