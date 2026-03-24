@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/photos.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body >
+
+   
+
+    
+    <header class="regular">
+        <nav class="container ">
+            <a href="../index.html"><img src="../img/logo.png" alt="mon logo"></a>
+            <a href="web.html">Mes créations web</a>
+            <a href="me.html">About</a>
+        </nav>
+
+    </header>
+
+   
+   
+
+    <div class=" Projets">
+        <h2 class="container" id="titre"></h2>
+
+        <div class="Proj container">
+            <!-- <button id="trad">traduire</button> -->
+
+            <div class="para-top">
+                <p id="txt"> </p>
+            </div>
+            <div class="croix">
+                <img src="../img/ophelia/IMG_1496.jpg">
+            </div>
+            <div class="croix2">
+                <img src="../img/ophelia/IMG_1506.jpg">
+            </div>
+            <div class="fleur">
+                <img src="../img/ophelia/IMG_1508.jpg">
+            </div>
+            <div class="main">
+                <img src="../img/ophelia/IMG_1514.jpg">
+            </div>
+            <div class="cache">
+                <img src="../img/ophelia/IMG_1510.jpg">
+            </div>
+            <div class="fleur2">
+                <img src="../img/ophelia/O.jpg">
+            </div>
+            <div class="para-bottom">
+                <h3 id="titre2"></h3>
+                <p id="prod"> </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+    
+
+    
+    let titre = document.getElementById("titre");
+    let txt = document.getElementById("txt");
+    let titre2 = document.getElementById("titre2");
+    let prod = document.getElementById("prod");
+    let trad = document.getElementById("trad");
+    let web = document.getElementById("web");
+    let me = document.getElementById("me");
+
+    /* titre.textContent = desc.ophelia[0].titre;
+    txt.textContent = desc.ophelia[0].txt;
+    titre2.textContent = desc.ophelia[0].titre2;
+    prod.textContent = desc.ophelia[0].products;
+    me.textContent = desc.nav[0].me;
+    web.textContent = desc.nav[0].web; */
+
+    
+
+
+    /* const req = new XMLHttpRequest();
+    req.addEventListener("load", evt => {
+    let data = JSON.parse(req.responseText);
+    
+    });
+    req.open("GET", "../trad/fr.json");
+    req.send() */
+
+    let recup = async () => {
+            let result = await fetch("../trad/fr.json");
+            let data = await result.json();
+
+        titre.textContent = data.ophelia.title;
+        txt.textContent = data.ophelia.description;
+        titre2.textContent = data.ophelia.title2;
+        prod.textContent = data.ophelia.produit;
+
+        
+        me.textContent = data.nav.me;
+        web.textContent = data.nav.web;
+    }
+
+    recup();
+    
+    </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<body >
+
+    <div id="intro">
+        <video id="animLogo" autoplay muted playsinline>
+          <source src="video/animlogo.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+
+<div id="accueil">
+    
+    
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="mon logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="photos.html">Photographie</a></li>
+                <li><a href="#">à propos</a></li>
+            </ul>
+        </nav>
+        <h1>Portfolio</h1>
+    </header>
+
+    <h1>Mes projets web</h1>
+
+    <div id="DevProjects" class="container">
+
+        
+
+        <article id="Phlox" class="card">
+                <img src="img/web/Phlowheader.png"></img>
+                <h2>Phlox</h2>
+                <p>Site vitrine</p>
+                <div class="techs">
+                    <span class="tech">css</span> <span class="tech">html</span >
+                </div>
+                <a href="https://lalypoteau.github.io/Damon_Albarn/" ><i class='bx bxl-github' style='color:#ffffffa7'  ></i></a>
+          </article>
+          
+        
+        <article id="Album" class="card">
+            <img src="img/web/albumsPhoto.png"></img>
+            <h2>Album photo</h2>
+            <p>lorem ipsum fleo"jfijofcdmz</p>
+            <div class="techs">
+                <span class="tech">css</span> <span class="tech">html</span> <span class="tech">laravel</span> <span class="tech">SQL</span>
+            </div>
+            <a href="https://lalypoteau.github.io/Damon_Albarn/" ><i class='bx bxl-github' style='color:#ffffffa7'  ></i></a>
+            
+            
+        </article>
+        <article id="Figma" class="card">
+            <img src="img/web/figmacompte.png"></img>
+            <h2>Maquette petite épicerie</h2>
+            <p>lorem ipsum fleo"jfijofcdmz</p>
+            <div class="techs">
+                <span class="tech">Figma</span>
+            </div>
+            <a href="https://lalypoteau.github.io/Damon_Albarn/" ><i class='bx bxl-github' style='color:#ffffffa7'  ></i></a>
+            
+        </article>
+
+        <article id="Damon" class="card">
+            <img src="img/web/demon.png"></img>
+            <h2>Chart.JS</h2>
+            <p>lorem ipsum fleo"jfijofcdmz</p>
+
+            <div class="techs">
+                <span class="tech">css</span> <span class="tech">html</span> <span class="tech">JavaScript</span>
+            </div>
+            <a href="https://lalypoteau.github.io/Damon_Albarn/" ><i class='bx bxl-github' style='color:#ffffffa7'  ></i></a>
+
+        </article>
+
+        <article id="JamYard" class="card">
+            <img src="img/web/JamYard.png"></img>
+            <h2>JamYard</h2>
+            <p>lorem ipsum fleo"jfijofcdmz</p>
+            
+            <div class="techs">
+                <span class="tech">css</span> <span class="tech">html</span> <span class="tech">laravel</span> <span class="tech">SQL</span>
+            </div>
+            <a href="https://lalypoteau.github.io/Damon_Albarn/" ><i class='bx bxl-github' style='color:#ffffffa7'  ></i></a>
+        </article> 
+
+    </div>
+
+    <footer>
+        <img src="img/feuille.png">
+    </footer>
+    
+</div>
+
+    <script>
+        let intro = document.getElementById("intro");
+        let video = document.getElementById("animLogo");
+        let accueil = document.getElementById("accueil");
+
+        video.addEventListener("ended", ()=>{
+            intro.style.display = "none";
+            accueil.style.display = "block";
+        });
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+.Projets{
+   margin-top: 150px;
+}
+
+.Projets h2{
+  color : white;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 15px;
+}
+
+/*présentation ophelia*/
+
+.Proj{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  grid-template-areas: "para1 para1 croix fleur croix2"
+                       "main main cache fleur2 para2";
+}
+
+
+.main{ 
+    grid-area: main; 
+}
+.croix{ 
+    grid-area: croix; 
+}
+.croix2{ 
+    grid-area: croix2; 
+}
+.cache{ 
+    grid-area: cache; 
+}
+.fleur{ 
+    grid-area: fleur; 
+}
+.fleur2{ 
+    grid-area: fleur2; 
+}
+
+.Proj img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+
+.para-top{
+  grid-area: para1;
+  background-color: rgba(255, 255, 255, 0.253);
+  border-radius: 1em;
+  padding-left: 15px;
+}
+
+.para-bottom{
+  grid-area: para2;
+}
+
+.para-bottom p{
+  color : white;
+  font-family: "Courier Prime", monospace;
+  width: 65%;
+}
+
+.para-bottom h3{
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+.para-top p{
+  color : white;
+  font-family: "Courier Prime", monospace;
+  width: 90%;
+  font-size: 1.5rem;
+}
+
+/*présentation photographie animaliere*/
+.animals{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  grid-template-areas: "para1 para1 lievre mesange ecureuil"
+                       "phoques mesange2 lievre mouette baille"
+                       "loutre chevreuil nelsun nelsun para2";
+}
+
+#loutre{ 
+    grid-area: loutre; 
+}
+#aurore{ 
+    grid-area : chevreuil; 
+}
+#mesange2{ 
+    grid-area: mesange2; 
+}
+#ecureuil{ 
+    grid-area: ecureuil; 
+}
+
+#nelsun{ 
+    grid-area: nelsun; 
+}
+#phoques{ 
+    grid-area : phoques; 
+}
+#baille{ 
+    grid-area: baille; 
+}
+#mesange{ 
+    grid-area: mesange; 
+}
+
+#lievre{ 
+    grid-area: lievre; 
+}
+
+#mouette{ 
+    grid-area: mouette; 
+}
+
+
+.animals img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+
+
+

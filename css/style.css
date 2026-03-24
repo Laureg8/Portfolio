@@ -1,0 +1,252 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+footer img{
+  width: 10%;
+  height: auto;
+  position: absolute;
+  right : 20px;
+}
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* animation logo*/
+
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#animLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#accueil {
+  display: none;
+}
+
+/* le header */
+
+
+.regular nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.regular a {
+  text-decoration: none;
+  margin: 15px;
+  font-family:Arial, Helvetica, sans-serif;
+  padding : 5px;
+  color : white;
+}
+
+.regular a:hover{
+  opacity: 0.7;
+}
+
+
+.regular img{
+  max-width: 30%;
+}
+
+.regular {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.1); /* Fond blanc très transparent */
+  backdrop-filter: blur(15px);         /* Flou de l'arrière-plan */
+  -webkit-backdrop-filter: blur(15px);
+  position: fixed;
+  top: 0;
+  left : 0;
+  z-index: 999;
+}
+
+.hero {
+  height: 100vh;
+  background: url('/img/hero.png') no-repeat center center/cover;
+  position: relative;
+}
+
+.hero h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 6rem;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  
+}
+
+/* Style du texte */
+.logo, .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif; 
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.logo img {
+  width: 50%;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+
+
+.gallery{
+  margin-top: 150px;
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.gallery img{
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+  margin: 0 0 15px 0;
+}
+
+.gallery img:hover{
+  transform: scale(0.99);
+}
+
+/* Partie présentation*/
+
+.presentation{
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.presentation p{
+  color : white ; 
+  width: 50%
+}
+
+#skills{
+  background-color: rgba(255, 255, 255, 0.232);
+}
+
+/* projets web */
+
+
+h1{
+  color : white;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#DevProjects{
+  margin-top: 100px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  height: auto;
+  margin-bottom: 20px;
+
+}
+
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.136); 
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 330px;
+  color: white;
+}
+
+.card:hover{
+  transform: scale(0.99);
+}
+
+
+.card img{
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 1em;
+  margin-top: 15px;
+}
+
+.card a{
+  position: absolute;
+  right:15px;
+  bottom:10px;
+  
+}
+
+.card a i {
+  font-size: 1.5rem; 
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.techs{
+  display: flex;
+  position: absolute;
+  left : 15px;
+  bottom : 10px;
+}
+
+
+.tech{
+  border-radius: 1em;
+  padding: 5px 10px;
+  margin-left: 15px;
+  background: rgba(255, 255, 255, 0.43); /* Fond blanc très transparent */
+  backdrop-filter: blur(15px);         /* Flou de l'arrière-plan */
+  -webkit-backdrop-filter: blur(15px);
+}
+
+
+
