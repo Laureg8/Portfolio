@@ -28,12 +28,14 @@
         </nav>
 
     </header>
+   
+    <section class="hero-section">
 
-   
-   
+        <h1>Projet Ophelia</h1>
+
+    </section>
 
     <div class=" Projets">
-        <h2 class="container" id="titre"></h2>
 
         <div class="Proj container">
             <!-- <button id="trad">traduire</button> -->
@@ -42,22 +44,22 @@
                 <p id="txt"> </p>
             </div>
             <div class="croix">
-                <img src="../img/ophelia/IMG_1496.jpg">
+                <img class="photo" src="../img/ophelia/IMG_1496.jpg">
             </div>
             <div class="croix2">
-                <img src="../img/ophelia/IMG_1506.jpg">
+                <img class="photo" src="../img/ophelia/IMG_1506.jpg">
             </div>
             <div class="fleur">
-                <img src="../img/ophelia/IMG_1508.jpg">
+                <img class="photo" src="../img/ophelia/IMG_1508.jpg">
             </div>
             <div class="main">
-                <img src="../img/ophelia/IMG_1514.jpg">
+                <img class="photo" src="../img/ophelia/IMG_1514.jpg">
             </div>
             <div class="cache">
-                <img src="../img/ophelia/IMG_1510.jpg">
+                <img class="photo" src="../img/ophelia/IMG_1510.jpg">
             </div>
             <div class="fleur2">
-                <img src="../img/ophelia/O.jpg">
+                <img class="photo" src="../img/ophelia/O.jpg">
             </div>
             <div class="para-bottom">
                 <h3 id="titre2"></h3>
@@ -77,9 +79,17 @@
     
     </footer>
 
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="">
+        </div>
+    </div>
+
     <script>
     
-    let titre = document.getElementById("titre");
     let txt = document.getElementById("txt");
     let titre2 = document.getElementById("titre2");
     let prod = document.getElementById("prod");
@@ -109,7 +119,6 @@
             let result = await fetch("../trad/fr.json");
             let data = await result.json();
 
-        titre.textContent = data.ophelia.title;
         txt.textContent = data.ophelia.description;
         titre2.textContent = data.ophelia.title2;
         prod.textContent = data.ophelia.produit;
@@ -120,6 +129,32 @@
     }
 
     recup();
+
+
+    const photos = document.querySelectorAll(".photo");
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".close");
+
+    photos.forEach(photo => {
+        photo.addEventListener("click", () => {
+            const img = photo.src;
+            
+            modalImg.src = img;
+
+            modal.classList.add("active");
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
     
     </script>
   
