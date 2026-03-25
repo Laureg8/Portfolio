@@ -195,6 +195,7 @@ body {
 .gallery{
   column-count: 3;
   column-gap: 15px;
+  margin-bottom: 8vh;
 }
 
 .gallery img{
@@ -243,7 +244,7 @@ h1{
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 8vh;
 }
 
 

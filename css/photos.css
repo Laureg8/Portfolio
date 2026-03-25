@@ -1,5 +1,5 @@
 .Projets{
-   margin-top: 150px;
+    margin-bottom: 8vh;
 }
 
 .Projets h2{
@@ -78,11 +78,11 @@
 
 /*présentation photographie animaliere*/
 .animals{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 15px;
-  grid-template-areas: "para1 para1 lievre mesange ecureuil"
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    grid-template-areas: "para1 para1 lievre mesange ecureuil"
                        "phoques mesange2 lievre mouette baille"
                        "loutre chevreuil nelsun nelsun para2";
 }
@@ -129,6 +129,8 @@
   border-radius: 1em;
 }
 
-
+.photo {
+    cursor: pointer;
+}
 
 

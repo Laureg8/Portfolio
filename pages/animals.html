@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=chillax@200,300,400,500,600,700,1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body >
     
@@ -26,44 +28,48 @@
 
     </header>
 
+    <section class="hero-section">
+
+        <h1>Photographie Animalière</h1>
+
+    </section>
   
     <div class="Projets" >
-        <h2 class="container" id="titre"></h2>
 
         <div class="animals container">
-            <button id="trad">traduire</button>
+            <!-- <button id="trad">traduire</button> -->
             <div class="para-top">
                 <p id="txt"> </p>
             </div>
             <div id="loutre">
-                <img src="../img/animals/loutre.jpg">
+                <img class="photo" src="../img/animals/loutre.jpg">
             </div>
             <div id="aurore">
-                <img src="../img/animals/aurore.jpg">
+                <img class="photo" src="../img/animals/aurore.jpg">
             </div>
             <div id="ecureuil">
-                <img src="../img/animals/ecureuil.jpg">
+                <img class="photo" src="../img/animals/ecureuil.jpg">
             </div>
             <div id="mesange2">
-                <img src="../img/animals/mesange2.jpg">
+                <img class="photo" src="../img/animals/mesange2.jpg">
             </div>
             <div id="mesange">
-                <img src="../img/animals/mesange.jpg">
+                <img class="photo" src="../img/animals/mesange.jpg">
             </div>
             <div id="mouette">
-                <img src="../img/animals/mouette.jpg">
+                <img class="photo" src="../img/animals/mouette.jpg">
             </div>
             <div id="nelsun">
-                <img src="../img/animals/nelsun.jpg">
+                <img class="photo" src="../img/animals/nelsun.jpg">
             </div>
             <div id="phoques">
-                <img src="../img/animals/phoques.jpg">
+                <img class="photo" src="../img/animals/phoques.jpg">
             </div>
             <div id="baille">
-                <img src="../img/animals/2.jpg">
+                <img class="photo" src="../img/animals/2.jpg">
             </div>
             <div id="lievre">
-                <img src="../img/animals/lievre.jpg">
+                <img class="photo" src="../img/animals/lievre.jpg">
             </div>
             <div class="para-bottom">
                 <h3 id="titre2"></h3>
@@ -84,43 +90,78 @@
     
     </footer>
 
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="">
+        </div>
+    </div>
+
     
-<script>
-    let desc = {
-        animals:[
-        {"titre":"Photographie animaliere", "txt":"Je pratique la photographie animaliére depuis plus de 2 ans maintenant. Les animaux et la nature en général sont pour moi une de mes plus grande source d'inspiration, c'est pour cela que j'aime les observer au plus près !", 
-        "titre2" : "Conception", 
-        "products" :"Appareils : Canon EOS R10 Objectif : f/11 600mm Modéles : Nos voisins de la forêt Retouches : Lightroom Classic"  }  
-        ]
-    };
+    <script>
 
-    let descEN = {
-        animals:[
-        {"titre":"Wild life photography", "txt":"I've been practising wild life photography almost for 2 years. Animals and nature are for me a greatest source of inspiration, that's the reason why I love to observe them ! ", 
-        "titre2" : "Creation", 
-        "products" :"Camera : Canon EOS R10 Lens : f/11 600mm Models : Animals of the forest Retouch : adobe Lightroom"  }  
-        ]
-    };
+        ScrollReveal().reveal('.animals div');
 
-    let titre = document.getElementById("titre");
-    let txt = document.getElementById("txt");
-    let titre2 = document.getElementById("titre2");
-    let prod = document.getElementById("prod");
-    let trad = document.getElementById("trad");
+        let desc = {
+            animals:[
+            {"titre":"Photographie animaliere", "txt":"Je pratique la photographie animalière depuis plus de 2 ans maintenant. Les animaux et la nature en général sont pour moi une de mes plus grande source d'inspiration, c'est pour cela que j'aime les observer au plus près !", 
+            "titre2" : "Conception", 
+            "products" :"Appareils : Canon EOS R10 Objectif : f/11 600mm Modéles : Nos voisins de la forêt Retouches : Lightroom Classic"  }  
+            ]
+        };
 
-    titre.textContent = desc.animals[0].titre;
-    txt.textContent = desc.animals[0].txt;
-    titre2.textContent = desc.animals[0].titre2;
-    prod.textContent = desc.animals[0].products;
+        let descEN = {
+            animals:[
+            {"titre":"Wild life photography", "txt":"I've been practising wild life photography almost for 2 years. Animals and nature are for me a greatest source of inspiration, that's the reason why I love to observe them ! ", 
+            "titre2" : "Creation", 
+            "products" :"Camera : Canon EOS R10 Lens : f/11 600mm Models : Animals of the forest Retouch : adobe Lightroom"  }  
+            ]
+        };
 
-    trad.addEventListener("click", () => {
-            titre.textContent = descEN.animals[0].titre;
-            txt.textContent = descEN.animals[0].txt;
-            titre2.textContent = descEN.animals[0].titre2;
-            prod.textContent = descEN.animals[0].products;
-            
-    });
-    
+        let txt = document.getElementById("txt");
+        let titre2 = document.getElementById("titre2");
+        let prod = document.getElementById("prod");
+        let trad = document.getElementById("trad");
+
+        txt.textContent = desc.animals[0].txt;
+        titre2.textContent = desc.animals[0].titre2;
+        prod.textContent = desc.animals[0].products;
+
+        // trad.addEventListener("click", () => {
+        //         titre.textContent = descEN.animals[0].titre;
+        //         txt.textContent = descEN.animals[0].txt;
+        //         titre2.textContent = descEN.animals[0].titre2;
+        //         prod.textContent = descEN.animals[0].products;
+                
+        // });
+
+        const photos = document.querySelectorAll(".photo");
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.querySelector(".close");
+
+        photos.forEach(photo => {
+            photo.addEventListener("click", () => {
+                const img = photo.src;
+                
+                modalImg.src = img;
+
+                modal.classList.add("active");
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("active");
+            }
+        });
+        
     </script>
 
 </body>
