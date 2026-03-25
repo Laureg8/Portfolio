@@ -250,7 +250,6 @@ h1{
 
 
 .card {
-  position: relative;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.136); 
   border-radius: 1em;
@@ -258,28 +257,35 @@ h1{
   text-align: center;
   flex-direction: column;
   align-items: center;
-  height: 330px;
+  justify-content: space-between;
+  height: auto;
   color: white;
+  gap: 2vh;
 }
 
 .card:hover{
   transform: scale(0.99);
 }
 
+.card h2 {
+  margin: 0;
+}
 
 .card img{
   width: 300px;
   height: 150px;
   object-fit: cover;
   border-radius: 1em;
-  margin-top: 15px;
+  margin-top: 2vh;
 }
 
 .card a{
-  position: absolute;
   right:15px;
   bottom:10px;
-  
+}
+
+.card p {
+  max-width: 300px;
 }
 
 .card a i {
@@ -291,26 +297,40 @@ h1{
 
 .techs{
   display: flex;
-  position: absolute;
-  left : 15px;
-  bottom : 10px;
+  justify-content: flex-start;
+  width: 80%;
+  margin-bottom: 2vh;
+  margin-left: 2vh;
+  gap: 2vh;
 }
 
 
 .tech{
   border-radius: 1em;
   padding: 5px 10px;
-  margin-left: 15px;
   background: rgba(255, 255, 255, 0.43); /* Fond blanc très transparent */
   backdrop-filter: blur(15px);         /* Flou de l'arrière-plan */
   -webkit-backdrop-filter: blur(15px);
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
 }
 
 
+.tags {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 
+.bxl-github {
+  margin-right: 2vh;
+}
 
-
+.bxl-figma {
+  margin-right: 2vh;
+}
 
 
 /* Footer */
