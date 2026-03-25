@@ -29,6 +29,7 @@ body {
   backdrop-filter: blur(15px);         /* Flou de l'arrière-plan */
   -webkit-backdrop-filter: blur(15px);
   transform: translateY(3px);
+  border: 1px solid white;
 }
 
 /* animation logo*/
@@ -114,9 +115,8 @@ body {
 .hero h2 {
   color: white;
   font-size: 3rem;
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Chillax', sans-serif;
+  font-weight: 700;
 }
 
 .boutons-hero {
@@ -142,9 +142,8 @@ body {
   margin: auto;
   color: white;
   font-size: 6rem;
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Chillax', sans-serif;
+  font-weight: 500;
 }
 
 .navbar {
@@ -308,8 +307,7 @@ footer {
   justify-content: space-between;
   height: auto;
   padding-top: 5vh;
-  margin-top: 8vh;
-  border-top: 2px solid white;
+  border-top: 2px solid rgba(255, 255, 255, 0.54);
 }
 
 footer div {
