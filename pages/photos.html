@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=chillax@200,300,400,500,600,700,1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
@@ -28,33 +29,41 @@
 
     <section class="hero-section">
 
-        <h1>Ma galerie photo</h1>
+        <div class="hero-div">
+            <h1>Ma galerie photo</h1>
+
+            <div class="boutons">
+                <a class="bouton" href="/pages/ophelia.html">Projet Ophelia</a>
+                <a class="bouton" href="/pages/animals.html">Photographie Animalière</a>
+            </div>
+        </div>
 
     </section>
 
     
-    <section id="ancrage" class="gallery container" >
-        <img  src="../img/oiseauParadis.JPG">
-        <a href = "animals.html"><img  src="../img/animals/mesange.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/oiseau.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/mesange2.jpg"></a>
-        <img  src="../img/jonquilles.JPG">
-        <img  src="../img/ophelia/O.jpg">
-        <img  src="../img/i.jpg"> 
-        <a href = "animals.html"><img  src="../img/animals/oiseau2.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/loutre.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/nelsun.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/ecureuil.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/aurore.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/mouette.jpg"></a>
-        <a href = "animals.html"><img  src="../img/animals/loutre2.JPG"></a>
-        <a href = "animals.html"><img  src="../img/julia.JPG"></a>
+    <section id="ancrage" class="gallery container">
+
+        <img class="photo" src="../img/oiseauParadis.JPG">
+        <img class="photo" src="../img/animals/mesange.jpg">
+        <img class="photo" src="../img/animals/oiseau.jpg">
+        <img class="photo" src="../img/animals/mesange2.jpg">
+        <img class="photo" src="../img/jonquilles.JPG">
+        <img class="photo" src="../img/ophelia/O.jpg">
+        <img class="photo" src="../img/i.jpg"> 
+        <img class="photo" src="../img/animals/oiseau2.jpg">
+        <img class="photo" src="../img/animals/loutre.jpg">
+        <img class="photo" src="../img/animals/nelsun.jpg">
+        <img class="photo" src="../img/animals/ecureuil.jpg">
+        <img class="photo" src="../img/animals/aurore.jpg">
+        <img class="photo" src="../img/animals/mouette.jpg">
+        <img class="photo" src="../img/animals/loutre2.JPG">
+        <img class="photo" src="../img/julia.JPG">
         
-        <a href = "ophelia.html" ><img  src="../img/ophelia/IMG_1496.jpg"></a>
-        <a href = "ophelia.html" ><img  src="../img/ophelia/IMG_1506.jpg"></a>
-        <a href = "ophelia.html" ><img  src="../img/ophelia/IMG_1508.jpg"></a>
-        <a href = "ophelia.html" ><img  src="../img/ophelia/IMG_1510.jpg"></a>
-        <a href = "ophelia.html" ><img  src="../img/ophelia/IMG_1514.jpg"></a> 
+        <img class="photo" src="../img/ophelia/IMG_1496.jpg">
+        <img class="photo" src="../img/ophelia/IMG_1506.jpg">
+        <img class="photo" src="../img/ophelia/IMG_1508.jpg">
+        <img class="photo" src="../img/ophelia/IMG_1510.jpg">
+        <img class="photo" src="../img/ophelia/IMG_1514.jpg">
 
     </section>
 
@@ -70,11 +79,45 @@
     
     </footer>
 
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="">
+        </div>
+    </div>
+
 
     <script>
         ScrollReveal().reveal('.gallery img');
-        ScrollReveal().reveal('.gallery a');
-</script>
+
+        const photos = document.querySelectorAll(".photo");
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.querySelector(".close");
+
+        photos.forEach(photo => {
+            photo.addEventListener("click", () => {
+                const img = photo.src;
+                
+                modalImg.src = img;
+
+                modal.classList.add("active");
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("active");
+            }
+        });
+
+    </script>
     
 
 </body>
