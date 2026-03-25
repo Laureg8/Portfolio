@@ -107,9 +107,8 @@ body {
 .hero h1 {
   color: white;
   font-size: 6rem;
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Chillax', sans-serif;
+  font-weight: 700;
 }
 
 .hero h2 {
@@ -197,6 +196,7 @@ body {
 .gallery img:hover{
   transform: scale(0.99);
 }
+
 
 /* Partie présentation*/
 
