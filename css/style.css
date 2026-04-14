@@ -231,6 +231,25 @@ body {
   justify-content: space-between;
 }
 
+.presentation > div{
+  position: relative;
+}
+
+#etoile{
+  position: absolute;
+  top: -35px;
+  left: -30px;
+  width: auto;
+  height: 30%;
+  z-index : -1;
+}
+
+.presentation img{
+  width: 40%;
+  height: auto;
+  z-index: 999;
+}
+
 
 .presentation p{
   color : white ; 
