@@ -94,7 +94,7 @@ body {
 .hero {
   margin-top: 140px;
   height: 100vh;
-  background: url('/img/hero.png') no-repeat center center/cover;
+  background: url('../img/hero.png') no-repeat center center/cover;
   background-blend-mode: darken;
   display: flex;
   flex-direction: column;
